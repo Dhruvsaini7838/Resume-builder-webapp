@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center mt-4">
+    <h1>Resume Builder Web App</h1>
+</div>
+<div class="container p-3 bg-info bg-opacity-10 border border-info mt-5 rounded-end">
+    <h2 class="text-center mb-5"><strong>Enter Details :</strong> </h2>
+    <form action="" method="POST" class="text-center">
+        {% csrf_token %}
+        <div class="container mt-2 mb-2 h4">
+            <label for="first name">First Name :</label>
+            <input type="text" name="fname" style="width: 70%;">
+            
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="last name">Last Name :</label>
+            <input type="text" name="lname" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="email">Email :</label>
+            <input type="email" name="email" style="width: 70%;">
+            
+        </div>
+        
+        <div class="container mt-2 mb-2 h4">
+            <label for="phone">Phone :</label>
+            <input type="number" name="phone" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="age">Age :</label>
+            <input type="number" name="age" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="address">Address :</label>
+            <input type="text" name="address" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="designation">Designation :</label>
+            <input type="text" name="designation" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="about">About :</label>
+            <input type="text" name="about" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="education">Higher Education :</label>
+            <input type="text" name="education" style="width: 70%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="skill 1">Skill 1 :</label>
+            <input type="text" name="skill1" style="width:30%;">
+            <input type="range" name="range1"  style="width: 30%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="skill 2">Skill 2 :</label>
+            <input type="text" name="skill2" style="width: 30%;">
+            <input type="range" name="range2"  style="width: 30%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="skill 3">Skill 3 :</label>
+            <input type="text" name="skill3" style="width: 30%;">
+            <input type="range" name="range3"  style="width: 30%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="skill 4">Skill 4 :</label>
+            <input type="text" name="skill4" style="width: 30%;">
+            <input type="range" name="range4"  style="width: 30%;">
+        </div>
+        <div class="container mt-2 mb-2 h4">
+            <label for="language">Languages Known :</label>
+            <input type="text" name="language" style="width: 70%;">
+        </div><br><hr>
+        <div class="container h4 ">
+            <h3 class="mb-4"><strong> Work Experience :</strong></h3>
+            <label for="experience">Experience 1:</label><br><br>
+            <label for="company">Company</label>
+            <input type="text" name="company1">
+            <label for="duration">Duration</label>
+            <input type="text" name="duration1">
+            <label for="role1">Role: </label>
+            <input type="text" name="role1">
+            <label for="role-desc">Role Description: </label>
+            <input type="text" name="role_desc1">
+        </div><br>
+        <div class="container h4">
+            <label for="experience">Experience 2:</label><br><br>
+            <label for="company">Company</label>
+            <input type="text" name="company2">
+            <label for="duration">Duration</label>
+            <input type="text" name="duration2">
+            <label for="role2">Role: </label>
+            <input type="text" name="role2">
+            <label for="role-desc">Role Description: </label>
+            <input type="text" name="role_desc2">
+        </div><br>
+        <div class="container h4">
+            <label for="experience">Experience 3:</label><br><br>
+            <label for="company">Company</label>
+            <input type="text" name="company3">
+            <label for="duration">Duration</label>
+            <input type="text" name="duration3">
+            <label for="role1">Role: </label>
+            <input type="text" name="role3">
+            <label for="role-desc">Role Description: </label>
+            <input type="text" name="role_desc3">
+        </div>
+        <br><hr>
+        <div class="container h4">
+            <h3 class="mb-4 "><strong> Qualifications :</strong></h3>
+            <label for="education1">Education1 :</label><br><br>
+            <label for="degree1">Degree :</label>
+            <input type="text" name="degree1">
+            <label for="course_duration1">Duration: </label>
+            <input type="text" name="course_duration1">
+            <label for="course1">Course : </label>
+            <input type="text" name="course1"><br>
+            <label for="university1">University : </label>
+            <input type="text" name="university1" style="
+            margin-top: 15px;">
+            <label for="course_desc1">Course Description: </label>
+            <input type="text" name="course_desc1">
+        </div>
+        <br>
+        <div class="container h4 mt-3">
+            <label for="education1">Education 2:</label><br><br>
+            <label for="Degree">Degree :</label>
+            <input type="text" name="degree2">
+            <label for="course_duration2">Duration: </label>
+            <input type="text" name="course_duration2">
+            <label for="course2">Course : </label>
+            <input type="text" name="course2"><br>
+            <label for="university2">University : </label>
+            <input type="text" name="university2" style="margin-top: 15px;">
+            <label for="course-desc">Course Description: </label>
+            <input type="text" name="course_desc2">
+        </div>
+        <br>
+        <div class="container h4 mt-3 ">
+            <label for="education3" class="mb-4">Education 3:</label><br>
+            <label for="Degree">Degree :</label>
+            <input type="text" name="degree3">
+            <label for="duration">Duration: </label>
+            <input type="text" name="course_duration3">
+            <label for="course3">Course : </label>
+            <input type="text" name="course3"><br>
+            <label for="university3">University : </label>
+            <input type="text" name="university3" style="margin-top: 15px;">
+            <label for="course-desc">Course Description: </label>
+            <input type="text" name="course_desc3">
+        </div>
+        
+
+        <button type="submit" class="mt-5 bg-success h4" style="width:30% ;">Submit</button>
+
+    </form>
+</div>
+
+{% endblock content %}
